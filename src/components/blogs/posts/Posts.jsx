@@ -14,7 +14,7 @@ export default function Posts() {
         link="https://reactjs23.blogspot.com/"
       />
       <Post
-        img="https://play-lh.googleusercontent.com/mHEywwrourM3N9Z94du0IqO7tVu0cm78E0NeYdUFUwDAvfPLtFt0jXMGbh8mIcapDio=w240-h480-rw"
+        img="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_a_Back_End_Developer.jpg"
         link1="web development  "
         link2="IT"
         title="How to write a BackEnd in Node"

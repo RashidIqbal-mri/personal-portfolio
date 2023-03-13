@@ -751,7 +751,7 @@ animation-delay: 0.25s;
   .skill-slider {
     width: 80%;
     margin: 0 auto;
-    margin-left:70px;
+    /* margin-left:70px; */
     position: relative;
   }
 

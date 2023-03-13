@@ -73,7 +73,7 @@ const ContactForm = () => {
       <h1  className='absolute top-[911px] z-20 left-[142px] w-44'>Blog </h1>
         </Link>
     </div>   
-    <img src={chat} alt="" className='absolute top-[250px] right-[659px] w-16 h-16' />
+    <img src={chat} alt="" className='absolute top-[210px] right-[659px] w-16 h-16' />
     <img src={road} alt="" className='absolute top-[773px] z-2 left-20 w-72 h-72 animate-pulse' />
     
     </div>
