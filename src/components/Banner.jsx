@@ -2,6 +2,7 @@ import React from "react";
 import TrackVisibility from "react-on-screen";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   
@@ -60,7 +61,7 @@ const Banner = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <span className="tagline absolute top-44 left-10">Welcome to my Portfolio</span>
+                  <span className="tagline absolute top-44 left-10  cursor-progress">Welcome to my Portfolio</span>
                   <br/>
                   <h1>
                     {`Hi! I'm Rashid.`}{" "}
@@ -80,12 +81,15 @@ const Banner = () => {
                   Design is not just what it looks like and feels like. Design is how it works.
 
                   </p>
-                  <div className={`flex  px-8 `}>
+                  <div className={`flex  px-8 cursor-pointer`}>
 
-                  <button onClick={() => console.log("connect")}>
-                    Let’s Connect
+                  <button onClick={() => console.log("connect")} className="animate-pulse">
+                    <span className="text-sky-300">Let’s</span>&nbsp; <span className="text-teal-300">Connect</span>
                   </button> 
+                  <Link to="/social">
+
                   <img src="images/connect.png" alt="" className={`button-connect ease-in-out duration-300 transform hover:translate-x-4`} />
+                  </Link>
                   </div>
                 </div>
               )}
@@ -94,8 +98,8 @@ const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={`isVisible ? "animate__animated animate__zoomIn" : "" relative bottom-32 right-20`}>
-                  <img src="images/rashid.png" alt="Header Img"/>
-                  <img src="images/hire.jpg" alt="" className={` hire relative bottom-56 left-2 animate-bounce`}/>
+                  <img src="images/rashid.png" alt="Header Img" className={`rashid`}/>
+                  <img src="images/hire.jpg" alt="" className={` hire relative bottom-64 left-2 animate-bounce`}/>
                 </div>}
             </TrackVisibility>
           </div>

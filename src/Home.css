@@ -28,11 +28,16 @@ html{
   scroll-padding-top: 75px;
 }
 
-body {
+body{
+  background-color: #0e111a;
+
+}
+
+.home{
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color:#090C14;
+  background-color:#07090e;
   color:#fff; 
   font-family:'Centra',sans-serif
 }
@@ -52,7 +57,7 @@ p, a, li, button, ul {
 
 /************ Navbar Css ************/
 nav.navbar {
-  padding: 18px 0;
+  padding-top: 10px;
   position: fixed;
   width:100%;
   top:0;
@@ -61,28 +66,58 @@ nav.navbar {
 }
 
 nav.scrolled{
-  padding: 0px 0;
+  padding-top:5px;
   background-color: #121212;
 }
 
 nav.navbar .navbar-logo{
+  
   width:6%;
+  /* padding:20px; */
+  scale:2;
+  /* margin-top:30px; */
+  
 }
+
+.logo-image-hover {
+  display: none;
+}
+
+.navbar-logo:hover .logo-image {
+  display: none;
+}
+
+.navbar-logo:hover .logo-image-hover {
+  display: inline-block;
+  scale:1.1
+}
+
+
+
+
 
 nav.navbar .nav-link a {
   font-weight: 400;
   color:rgb(254, 255, 255);
+
   letter-spacing: 0.8px;
   padding: 0 25px;
-  font-size: 28px;
-  /* opacity: 0.75; */
+  font-size: 24px;
+  
  
   
 }
 
-nav.navbar .nav-link a:hover,
+nav.navbar .nav-link a:hover
+{
+  color:rgb(134, 214, 214);
+  
+}
 nav.navbar .nav-link a:active {
-opacity: 0.5;
+
+  color:rgb(134, 214, 214);
+
+
 
 }
 span.navbar-text {
@@ -90,8 +125,9 @@ span.navbar-text {
     align-items: center;
 }
 .social-icon {
+
     display: inline-block;
-    margin-left: 14px;
+    margin-left: 79px;
   
 }
 
@@ -101,7 +137,7 @@ span.navbar-text {
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
-  margin-right: 6px;
+  margin-right: 18px;
   align-items: center;
   justify-content: center;
   line-height: 1;
@@ -342,6 +378,153 @@ transition: 0.3s ease-in-out;
 }
 
 /************ Skills Css ************/
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.container .card {
+
+    position: relative;
+    width:220px;
+    height:250px;
+    /* background:; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .percent {
+    position: relative;
+    width:150px;
+    height:150px;
+   
+    
+}
+
+.container .card .percent svg{
+
+    position: relative;
+    width:150px;
+    height:150px;
+    transform: rotate(270deg);
+
+}
+
+.container .card .percent svg circle{
+
+    width:100%;
+    height:100%;
+    fill:transparent;
+    stroke-width: 2;
+    stroke:#191919;
+    transform: translate(5px,5px);
+}
+
+.container .card .percent svg circle:nth-child(2){
+
+stroke:var(--clr);
+stroke-dasharray:440; 
+stroke-dashoffset:calc(440 - (440 * var(--num)) /100);
+opacity:0;
+animation: fadeIn 1s linear forwards;
+
+animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position:absolute;
+    
+    inset:5px;
+    z-index:10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: animateDot 1s linear forwards;
+}
+
+@keyframes animateDot {
+    0%
+    {
+        transform:rotate(0deg);
+    }
+
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+.dot::before {
+    content:'';
+    position: absolute;
+    top:-5px;
+    left:50%;
+    transform: translateX(-50%);
+    width:10px;
+    height:10px;
+    border-radius: 50%;
+    background:var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
+}
+
+.number 
+{
+position: absolute;
+inset:0;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+opacity:0;
+animation: fadeIn 1s linear forwards;
+
+animation-delay: 0.25s;
+}
+
+.number h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 81px;
+    margin-left:20px;
+    color:#fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.number h2 span 
+{
+    
+    font-weight: 300;
+    color:#fff;
+    font-size:0.5em;
+
+}
+
+.number p {
+    font-weight: 300;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color:rgba(255,255,255,0.75)
+}
+
 .skill {
   padding: 0 0 250px 20px;
   position: relative;
@@ -353,8 +536,9 @@ transition: 0.3s ease-in-out;
   text-align: center;
   padding: 40px 0px;
   margin-top:250px;
-  margin-left:130px;
+  margin-left:320px;
 }
+
 
 .skill h2 {
 	font-size: 45px;
@@ -372,6 +556,7 @@ transition: 0.3s ease-in-out;
 .skill-slider {
   width: 80%;
   margin: 0 auto;
+  margin-left:120px;
   position: relative;
 }
 
@@ -546,8 +731,89 @@ transition: 0.3s ease-in-out;
 }
 
 
+@media only screen and (max-width: 768px) {
+  .skill-bx {
+    
+  margin-top: 50px;
+  margin-left: 0px;
+  border-radius: 24px;
+  padding: 20px 0;
+  }
 
+  .rashid{
+    display: none;
+  }
+
+  .hire{
+    display: none;
+  }
+
+  .skill-slider {
+    width: 80%;
+    margin: 0 auto;
+    margin-left:70px;
+    position: relative;
+  }
+
+  nav.navbar .nav-link a {
+    font-weight: 400;
+    color:rgb(254, 255, 255);
+    letter-spacing: 0.8px;
+    padding: 0 23px;
+    font-size: 26px;
+    
+   
+    
+  }
+  
+  }
+
+/* -------------footer------------------ */
+.footer {
+  padding: 0 0 20px 0;
  
+}
+.footer .footer-copy{
+  font-weight: 400;
+  font-size: 24px;
+  color: #79d7fc;
+  letter-spacing: 0.5px;
+  padding-top:40px ;
+  padding-left: 68px;
+}
+
+.footer .footer-date
+{
+  font-size: 44px;
+  color: #79d7fc;
+  letter-spacing: 0.5px;
+  padding-left:1600px;
+  position:relative;
+  top:-70px;
+}
+ 
+
+.footer-logo{
+  transform: translate(120px,80px);
+}
+
+.footer-logo a img {
+  scale: 4;
+}
+
+.footer-logo-image-hover{
+  display: none;
+}
+.footer-logo:hover .footer-logo-image{
+  display: none;
+}
+
+.footer-logo:hover .footer-logo-image-hover{
+  display: inline-block;
+}
+
+
+
 /* ----------- */
 
 .App {

@@ -36,18 +36,18 @@ export const projects = [
           imgUrl: projImg6,
         },
         {
-          title: "Weather Application ",
+          title: "Parallax Scroll Horizontal ",
           description: "React/Tailwind",
           imgUrl: projImg2,
         },
         {
-          title: "Dynamic Quote App",
+          title: "Parallax Mountain",
           description: "React",
           imgUrl: projImg4,
         },
         {
-          title: "Pizza Cart",
-          description: "React",
+          title: "Parallax Forest",
+          description: "Html/Css/Js",
           imgUrl: projImg5,
         },
       ];
